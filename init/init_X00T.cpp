@@ -95,12 +95,12 @@ void vendor_check_variant()
     if (sys.totalram > 4096ull * 1024 * 1024) {
         // Russian model
         if (region == "RU") {
-            build_fingerprint = "asus/RU_X00TD/ASUS_X00T_9:9/PKQ1/16.2017.1906.055-20190703:user/release-keys";
+            build_fingerprint = "asus/RU_X00TD/ASUS_X00T_9:9/PKQ1/16.2017.1906.057-20190816:user/release-keys";
             product_device = "ASUS_X00T_9";
 
         // Global model
         } else {
-            build_fingerprint = "asus/WW_X00TD/ASUS_X00T_3:9/PKQ1/16.2017.1906.056-20190722:user/release-keys";
+            build_fingerprint = "asus/WW_X00TD/ASUS_X00T_3:9/PKQ1/16.2017.1906.057-20190816:user/release-keys";
             product_device = "ASUS_X00T_3";
         }
 
@@ -108,12 +108,12 @@ void vendor_check_variant()
     } else {
         // Russian model
         if (region == "RU") {
-            build_fingerprint = "asus/RU_X00TD/ASUS_X00T_6:9/PKQ1/16.2017.1906.055-20190703:user/release-keys";
+            build_fingerprint = "asus/RU_X00TD/ASUS_X00T_6:9/PKQ1/16.2017.1906.057-20190816:user/release-keys";
             product_device = "ASUS_X00T_6";
 
         // Global model
         } else {
-            build_fingerprint = "asus/WW_X00TD/ASUS_X00T_2:9/PKQ1/16.2017.1906.056-20190722:user/release-keys";
+            build_fingerprint = "asus/WW_X00TD/ASUS_X00T_2:9/PKQ1/16.2017.1906.057-20190816:user/release-keys";
             product_device = "ASUS_X00T_2";
         }
     }
@@ -124,9 +124,6 @@ void vendor_check_variant()
         product_model = "ZB602KL";
     else
         product_model = "ZB601KL";
-
-    if (!strcmp(product_name, "WW_X00TD"))
-        property_override("ro.build.description", "sdm660_64-user 9 PKQ1 1261 release-keys"); //for 056 WW ROM
 
     // Override props based on values set
     property_override_dual("ro.product.device", "ro.vendor.product.device", product_device);
