@@ -461,7 +461,7 @@ on post-fs-data
 # Huaqin add for bt/wifi prop by zhouyingchen at 2018/03/23 start
 service nvram_btwifi /vendor/bin/nvram_btwifi
     user root
-    group system
+    group system oem_2901
     oneshot
     disabled
 
