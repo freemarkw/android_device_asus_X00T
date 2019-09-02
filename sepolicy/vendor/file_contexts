@@ -1,0 +1,25 @@
+# Baseband
+/(vendor|system/vendor)/bin/fix_baseband.sh                                                             u:object_r:fix_baseband_exec:s0
+
+# Fingerprint
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.asus_X00T       u:object_r:hal_fingerprint_default_exec:s0
+/dev/goodix_fp                                                                                          u:object_r:goodix_fp_device:s0
+/data/gf_data(/.*)?                                                                                     u:object_r:goodix_fp_data_file:s0
+
+/dev/fpsdev0                                                                                            u:object_r:cdfinger_device:s0
+/data/system/cdfinger(/.*)?                                                                             u:object_r:cdfinger_data_file:s0
+
+# Input devices
+/(vendor|system/vendor)/usr/keylayout(/.*)?                                                             u:object_r:keylayout_file:s0
+
+# Light
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.asus_X00T                         u:object_r:hal_light_default_exec:s0
+/sys/class/leds(/.*)?                                                                                   u:object_r:sysfs_leds:s0
+
+# NVRAM
+/(vendor|system/vendor)/bin/init\.btmac\.sh                                                             u:object_r:init_blutmac_exec:s0
+/(vendor|system/vendor)/bin/nvram_btwifi                                                                u:object_r:nvram_btwifi_exec:s0
+
+# Touch
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.asus_X00T                           u:object_r:hal_touch_asus_x00t_exec:s0
+

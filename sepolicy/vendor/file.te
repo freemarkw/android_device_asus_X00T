@@ -1,0 +1,21 @@
+# Fingerprint
+type goodix_fp_data_file, file_type, core_data_file_type, data_file_type;
+type cdfinger_data_file, file_type, core_data_file_type, data_file_type;
+
+# Input devices
+type keylayout_file, file_type, vendor_file_type;
+
+# Power
+type debugfs_power_stats, fs_type, debugfs_type;
+
+# Sensors
+type alsps_stk3x1x, fs_type, sysfs_type;
+
+# Touchpanel gesutres
+type proc_touchpanel, fs_type, proc_type;
+
+# WLAN
+type sysfs_wlan, fs_type, sysfs_type;
+
+# P2P0
+type sysfs_p2p0, fs_type, sysfs_type;

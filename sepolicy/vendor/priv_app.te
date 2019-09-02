@@ -1,0 +1,7 @@
+allow priv_app sysfs_wlan:file { r_file_perms };
+allow priv_app sysfs_p2p0:file { r_file_perms } ;
+
+allow priv_app bt_firmware_file:filesystem { getattr } ;
+allow priv_app firmware_file:filesystem { getattr } ;
+
+get_prop(priv_app, baseband_prop)
