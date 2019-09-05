@@ -278,6 +278,9 @@ on post-fs-data
     #Create folder of camera
     mkdir /data/vendor/camera 0770 camera camera
 
+    # NFC local data and nfcee xml storage	
+    mkdir /data/nfc 0770 nfc nfc	
+    mkdir /data/nfc/param 0770 nfc nfc	
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
@@ -478,12 +481,6 @@ service vendor-btmac-sh  /vendor/bin/init.btmac.sh
     user root
     oneshot
     disabled
-
-service nqnfcinfo /vendor/bin/nqnfcinfo
-    class late_start
-    group nfc
-    user system
-    oneshot
 
 service iop /vendor/bin/iop
     class main
