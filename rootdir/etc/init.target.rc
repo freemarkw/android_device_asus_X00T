@@ -277,8 +277,9 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
      user root
      group system wakelock
 
-#Huaqin modify for disable sar in Indonesia by chenyijun5 at 2018/03/20 start
-on property:ro.config.versatility=ID
+# Custom roms based on oreo and pie doesnt support sar module by default. 
+# Maybe this situation may changed in the future
+# but for now disable sar for all. 
+# on property:ro.config.versatility=ID
+on boot
     write /sys/module/sx9310/parameters/sar_switcher 1
-
-#Huaqin modify for disable sar in Indonesia by chenyijun5 at 2018/03/20 end
